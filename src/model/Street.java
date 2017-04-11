@@ -5,7 +5,9 @@ package model;
  */
 public class Street extends Motorcycle {
 
-    Street(String name, int year, float capacity) {
+    private int speedLimited;
+
+    Street(String name, int year, double capacity) {
         super(name, year, capacity);
     }
 
@@ -15,7 +17,7 @@ public class Street extends Motorcycle {
     }
 
     @Override
-    public float getCapacity() {
+    public double getCapacity() {
         return capacity;
     }
 
@@ -23,4 +25,13 @@ public class Street extends Motorcycle {
     public int getYear() {
         return year;
     }
+
+    public int getSpeedLimited(){
+        return speedLimited;
+    }
+
+    public void setSpeedLimited(int speedLimited){
+        this.speedLimited = speedLimited;
+    }
+
 }

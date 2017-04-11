@@ -8,5 +8,7 @@ public class Enduro extends OffRoad {
         super(name, year, capacity);
     }
 
-    
+    public void soud(){
+        System.out.print("Wrum-wrum\n");
+    }
 }

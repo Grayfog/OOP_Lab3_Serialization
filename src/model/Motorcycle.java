@@ -1,14 +1,16 @@
 package model;
 
+import java.io.Serializable;
+
 /**
  * Created by dmitry on 10.04.17.
  */
-public abstract class Motorcycle {
+public abstract class Motorcycle implements Serializable {
     protected int year;
-    protected float capacity;
+    protected double capacity;
     protected String name;
 
-    Motorcycle(String name, int year, float capacity){
+    public Motorcycle(String name, int year, double capacity){
         this.name = name;
         this.year = year;
         this.capacity = capacity;
@@ -16,7 +18,7 @@ public abstract class Motorcycle {
     }
 
     public abstract String getName();
-    public abstract float getCapacity();
+    public abstract double getCapacity();
     public abstract int getYear();
 
 }

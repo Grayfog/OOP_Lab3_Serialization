@@ -5,22 +5,22 @@ package model;
  */
 public class OffRoad extends Motorcycle {
 
-    OffRoad(String name, int year, float capacity) {
+    OffRoad(String name, int year, double capacity) {
         super(name, year, capacity);
     }
 
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
     @Override
-    public float getCapacity() {
-        return 0;
+    public double getCapacity() {
+        return capacity;
     }
 
     @Override
     public int getYear() {
-        return 0;
+        return year;
     }
 }
