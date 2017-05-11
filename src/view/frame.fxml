@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#clickOpenFile" text="Open File" />
+                  <MenuItem mnemonicParsing="false" onAction="#clickSaveFile" text="Save File" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#clickAdd" text="Add" />
+              <MenuItem mnemonicParsing="false" text="Delete" onAction="#clickDelete"/>
+                  <MenuItem mnemonicParsing="false" onAction="#clickEdit" text=" Editing" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="tableView" prefHeight="130.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="parametrColumn" prefWidth="163.0" text="Parametr" />
+          <TableColumn minWidth="0.0" prefWidth="313.0" text="Property" />
+        </columns>
+      </TableView>
+   </center>
+   <left>
+      <ComboBox fx:id="comboBoxClass" prefWidth="150.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

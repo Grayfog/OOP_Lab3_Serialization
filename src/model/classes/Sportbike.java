@@ -1,5 +1,7 @@
 package model;
 
+import javafx.beans.property.StringProperty;
+
 /**
  * Created by dmitry on 10.04.17.
  */
@@ -27,4 +29,5 @@ public class Sportbike extends Street {
     public void setFlow(boolean unidirectionalFlow){
         this.unidirectionalFlow = unidirectionalFlow;
     }
+
 }

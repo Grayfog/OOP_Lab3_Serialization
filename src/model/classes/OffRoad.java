@@ -1,19 +1,25 @@
 package model;
 
+import javafx.beans.property.StringProperty;
+
 /**
  * Created by dmitry on 10.04.17.
  */
-public class Street extends Motorcycle {
+public class OffRoad extends Motorcycle {
 
-    private int speedLimited;
-
-    Street(String name, int year, double capacity) {
+    OffRoad(String name, int year, double capacity) {
         super(name, year, capacity);
     }
 
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public StringProperty getNameProperty(){
+        nameProperty.setValue(name);
+        return nameProperty;
     }
 
     @Override
@@ -25,13 +31,4 @@ public class Street extends Motorcycle {
     public int getYear() {
         return year;
     }
-
-    public int getSpeedLimited(){
-        return speedLimited;
-    }
-
-    public void setSpeedLimited(int speedLimited){
-        this.speedLimited = speedLimited;
-    }
-
 }

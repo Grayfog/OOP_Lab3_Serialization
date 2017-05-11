@@ -1,5 +1,7 @@
 package model;
 
+import javafx.beans.property.StringProperty;
+
 import java.io.Serializable;
 
 /**
@@ -9,6 +11,7 @@ public abstract class Motorcycle implements Serializable {
     protected int year;
     protected double capacity;
     protected String name;
+    protected StringProperty nameProperty;
 
     public Motorcycle(String name, int year, double capacity){
         this.name = name;
@@ -20,5 +23,6 @@ public abstract class Motorcycle implements Serializable {
     public abstract String getName();
     public abstract double getCapacity();
     public abstract int getYear();
+    public abstract StringProperty getNameProperty();
 
 }
