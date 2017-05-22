@@ -1,28 +1,44 @@
-package model;
+package model.classes;
 
-import javafx.beans.property.StringProperty;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.ser.Serializers;
 
 import java.io.Serializable;
 
 /**
  * Created by dmitry on 10.04.17.
  */
-public abstract class Motorcycle implements Serializable {
-    protected int year;
-    protected double capacity;
-    protected String name;
-    protected StringProperty nameProperty;
+//@JsonIgnoreProperties(ignoreUnknown = true)
+public class Motorcycle implements Serializable{
+    private int year;
+    private double capacity;
+    private String name;
+    private String classModel;
 
-    public Motorcycle(String name, int year, double capacity){
+    public String getName(){
+        return name;
+    };
+    public double getCapacity(){
+        return capacity;
+    };
+    public int getYear(){
+        return year;
+    };
+    public String getClassModel(){
+        return classModel;
+    };
+    public void setName(String name){
         this.name = name;
-        this.year = year;
+    };
+    public void setCapacity(double capacity){
         this.capacity = capacity;
-
-    }
-
-    public abstract String getName();
-    public abstract double getCapacity();
-    public abstract int getYear();
-    public abstract StringProperty getNameProperty();
+    };
+    public void setClassModel(String classModel){
+        this.classModel = classModel;
+    };
+    public void setYear(int year){
+        this.year = year;
+    };
 
 }

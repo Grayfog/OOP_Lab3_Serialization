@@ -1,34 +1,19 @@
-package model;
+package model.classes;
 
-import javafx.beans.property.StringProperty;
+import java.io.Serializable;
 
 /**
  * Created by dmitry on 10.04.17.
  */
-public class OffRoad extends Motorcycle {
+public class OffRoad extends Motorcycle implements Serializable{
 
-    OffRoad(String name, int year, double capacity) {
-        super(name, year, capacity);
+    private int hp;
+
+    public void setHp(int hp){
+        this.hp = hp;
     }
 
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public StringProperty getNameProperty(){
-        nameProperty.setValue(name);
-        return nameProperty;
-    }
-
-    @Override
-    public double getCapacity() {
-        return capacity;
-    }
-
-    @Override
-    public int getYear() {
-        return year;
+    public int getHp(){
+        return hp;
     }
 }

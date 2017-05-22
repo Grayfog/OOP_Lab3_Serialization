@@ -1,18 +1,17 @@
-package model;
+package model.classes;
 
-import javafx.beans.property.StringProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.io.Serializable;
 
 /**
  * Created by dmitry on 10.04.17.
  */
-public class Sportbike extends Street {
+
+public class Sportbike extends Street implements Serializable{
 
     private int weight;
     private boolean unidirectionalFlow;
-
-    public Sportbike(String name, int year, double capacity) {
-        super(name, year, capacity);
-    }
 
     public int getWeight(){
         return weight;
@@ -22,7 +21,7 @@ public class Sportbike extends Street {
         this.weight = weight;
     }
 
-    public boolean isFlow(){
+    public boolean getFlow(){
         return unidirectionalFlow;
     }
 
