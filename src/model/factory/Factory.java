@@ -637,4 +637,8 @@ public class Factory {
         return factoryEditMotorcycle.get(id).getEditMoto(motorcycle);
     }
 
+    public Map<String, CreateGrid> getFactoryCreatorMotorcycle(){
+        return factoryCreatorMotorcycle;
+    }
+
 }

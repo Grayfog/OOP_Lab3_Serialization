@@ -1,9 +1,5 @@
 package model.classes;
 
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.ser.Serializers;
-
 import java.io.Serializable;
 
 /**
@@ -18,27 +14,27 @@ public class Motorcycle implements Serializable{
 
     public String getName(){
         return name;
-    };
+    }
     public double getCapacity(){
         return capacity;
-    };
+    }
     public int getYear(){
         return year;
-    };
+    }
     public String getClassModel(){
         return classModel;
-    };
+    }
     public void setName(String name){
         this.name = name;
-    };
+    }
     public void setCapacity(double capacity){
         this.capacity = capacity;
-    };
+    }
     public void setClassModel(String classModel){
         this.classModel = classModel;
-    };
+    }
     public void setYear(int year){
         this.year = year;
-    };
+    }
 
 }
